@@ -1,6 +1,7 @@
 package easy;
 
 /*
+ * This defines the solution for e.txt.
  * Functions:
  * -- solution(IntList L): this function accepts a IntList object as an argument
  * 						   and return the length of this IntList.

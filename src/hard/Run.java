@@ -1,7 +1,7 @@
 package hard;
 
 /*
- * This is the main function for h.txt.
+ * This contains the main function for h.txt, it tests the solution defined in class Solution..
  * Initialize the Solution class object, and it can use the solution defined in the Solution class to solve the problem.
  */
 

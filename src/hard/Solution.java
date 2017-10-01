@@ -1,5 +1,6 @@
 package hard;
 /*
+ * This defines the solution method for h.txt.
  * Functions:
  * -- solution(int[] A, int[] B): this is the solution to the problem, it accepts two arrays as input and ther return the result we need.
  * -- combination(int n): this function accepts an integer n as input, then it calculates the combination result: C(n,2) and return it. 
@@ -14,11 +15,11 @@ public class Solution {
 		int start = 0, end = A.length - 1;
 		int scale = 1000000;		// define the scale as 1,000,000 here, so it's convenient to use and modify.
 		
-/*
- * Because 0 * 0 >= 0 + 0 is true, so we need to check how many 0s in the array.
- * If there are more than one 0 in the array, then we need to take them into count,
- * o do that I build a function called combination to calculate the C(n, 2).
- */
+		/*
+		* Because 0 * 0 >= 0 + 0 is true, so we need to check how many 0s in the array.
+		* If there are more than one 0 in the array, then we need to take them into count,
+		* to do that I build a function called combination to calculate the C(n, 2).
+		*/
 		for (int i = start; i <= end; i++) {
 			if (A[i] == 0 && B[i] == 0) start++;
 			else break;
@@ -29,10 +30,10 @@ public class Solution {
 		if (count >= 1000000000) return count;		// If count is equal to 1,000,000,000, it has no need to move forward and just returns 1,000,000,000 as result.
 		
 
-/*
- * For indexes start, end, if C[start] * C[end] >= C[start] + C[end], then all elements from start to end - 1 could also meet the requirement
- * So count += end - start; here (end - start) is the count of number from start to end - 1.
- */
+		/*
+		* For indexes start, end, if C[start] * C[end] >= C[start] + C[end], then all elements from start to end - 1 could also meet the requirement
+		* So count += end - start; here (end - start) is the count of number from start to end - 1.
+		*/
 		while (start < end) {
 			double num1 = A[start] + (double) B[start] / scale;
 			if (num1 > 1) {

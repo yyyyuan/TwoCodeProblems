@@ -22,7 +22,7 @@ public class IntList {
 	public static IntList build(int n) {
 		if (n == 0) return null;
 		if (n < 1) {
-			throw new IllegalArgumentException("The input integer should not be negative");		// If the input is less than 0, it will throw a exception, just in case.
+			throw new IllegalArgumentException("The input integer should not be negative.");		// If the input is less than 0, it will throw a exception, just in case.
 		}
 		
 		IntList head = new IntList();
